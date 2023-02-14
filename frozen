@@ -1,0 +1,19 @@
+use_synth :piano
+use_bpm 98
+
+
+play :e4
+sleep 0.25
+
+
+play :f5
+sleep 0.25
+play :e5
+sleep 0.25
+play :bb4
+sleep 0.75
+play :d5
+sleep 1
+
+play :ab4
+sleep 1.5
