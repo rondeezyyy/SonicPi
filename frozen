@@ -66,9 +66,11 @@ live_loop :mainmelody2 do
   sleep 0.75
   
   play :ab4
+  sample :bd_pure, amp: 3
   sleep 2.5
   
   play :cb4,  sustain: 10, amp: 2
+  sample :bd_pure, amp: 3
   sleep 0.25
   play :eb4
   sleep 0.25
@@ -76,9 +78,11 @@ live_loop :mainmelody2 do
   sleep 0.25
   
   play :bb4
+  sample :bd_pure, amp: 3
   sleep 0.75
   
   play :ab4
+  sample :bd_pure, amp: 3
   sleep 2.5
   stop
 end
