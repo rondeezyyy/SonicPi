@@ -22,4 +22,3 @@ num = 21 #start at 1!
   sleep 0.125
   num = num + 1
 end
-puts("HAPPY NEW YEAR!")
