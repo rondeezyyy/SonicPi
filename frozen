@@ -32,13 +32,13 @@ live_loop :mainmelody do
   play :eb5,  sustain: 3
   sleep 0.25
   play :bb4,  sustain: 3
-  sample :bd_pure, amp: 5
+  sample :bd_pure, amp: 1
   sleep 0.75
   play :db5,  sustain: 3
-  sample :bd_pure, amp: 6
+  sample :bd_pure, amp: 2
   sleep 1
   play :ab4,  sustain: 3
-  sample :bd_pure, amp: 7
+  sample :bd_pure, amp: 3
   sleep 1
   stop
 end
@@ -47,11 +47,14 @@ end
 
 sleep 6
 
+backgroundone = ["bb5", "ab5"]
+index = 0
 live_loop :foo do :background
-  play :bb5,  sustain: 8, amp: 1
-  sleep 1
-  play :ab5,  sustain: 8, amp: 1
-  sleep 1
+  2.times do
+    play backgroundone[index]
+    sleep 1
+    index = index +1
+  end
   stop
 end
 
@@ -59,7 +62,7 @@ sleep 2
 
 live_loop :mainmelody2 do
   play :cb4,  sustain: 10, amp: 2
-  sample :bd_pure, amp: 8
+  sample :bd_pure, amp: 4
   sleep 0.25
   play :eb4
   sleep 0.25
@@ -70,11 +73,11 @@ live_loop :mainmelody2 do
   sleep 0.75
   
   play :ab4
-  sample :bd_pure, amp: 8.1
+  sample :bd_pure, amp: 5
   sleep 2.5
   
   play :cb4,  sustain: 10, amp: 2
-  sample :bd_pure, amp: 8.2
+  sample :bd_pure, amp: 6
   sleep 0.25
   play :eb4
   sleep 0.25
@@ -82,11 +85,11 @@ live_loop :mainmelody2 do
   sleep 0.25
   
   play :bb4
-  sample :bd_pure, amp: 8.3
+  sample :bd_pure, amp: 7
   sleep 0.75
   
   play :ab4
-  sample :bd_pure, amp: 8.4
+  sample :bd_pure, amp: 8
   sleep 2.5
   stop
 end
