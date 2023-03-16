@@ -1,10 +1,20 @@
 use_synth :piano
 use_bpm 98
-atl  = "C:/Users/Ronald_Hubbard/Downloads/ATL JACOB.wav"
 
-sample atl
+x = "C:/Users/Ronald_Hubbard/Downloads/ATL JACOB.wav"
+s = 0
+f = 0.25
+a = 1
 
-sleep 4
+
+4.times do
+  sample x, start: s, finish: f, amp: a
+  s = s + 0.25
+  f = f + 0.25
+  a = a + 1
+  sleep 4.145/4
+end
+
 
 live_loop :mainmelody do
   play :eb4,  sustain: 10, amp: 2
@@ -25,7 +35,7 @@ live_loop :mainmelody do
   
   
   play :eb4,  sustain: 10, amp: 2
-  sample :bd_pure, amp: 4
+  sample :bd_pure
   sleep 0.25
   play :f5,  sustain: 3
   sleep 0.25
