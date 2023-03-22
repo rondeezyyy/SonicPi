@@ -1,0 +1,43 @@
+use_bpm 120
+use_synth :chiplead
+x = 0.5
+define :thang do |n1, n2, n3, n4, n5, n6, n7, n8|
+  
+  play n1
+  play n2
+  sleep x
+  
+  play n1
+  play n2
+  sleep x
+  
+  play n3
+  play n4
+  sleep x
+  
+  play n1
+  play n2
+  sleep x
+  
+  play n5
+  play n6
+  sleep x
+  
+  play n1
+  play n2
+  sleep x
+  
+  play n7
+  play n8
+  sleep x
+  
+  play n5
+  play n6
+  sleep x
+end
+
+# Mortal Kombat Theme
+thang :a4, :a5, :c5, :c6, :d5, :d6, :e5, :e6
+thang :c5, :c6, :e5, :e6, :g5, :g6, :c4, :c5
+thang :g4, :g5, :b4, :g5, :c5, :c6, :d5, :d6
+thang :f4, :f5, :a4, :a5, :c5, :c6, :b4, :b5
