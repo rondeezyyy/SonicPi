@@ -1,0 +1,148 @@
+use_bpm 87
+use_synth :piano
+
+
+define :testitout do
+  piano = [:gs4, :as4, :gs4, :cs4, :ds4, :as3, :fs3]
+  timing = [0, 0.5, 1, 0, 0, 0, 2.5, 0]
+  
+  i = 0
+  
+  live_loop :test do
+    7.times do
+      play piano[i]
+      sleep timing[i]
+      i = i + 1
+    end
+    stop
+  end
+  
+  piano2 = [:ds2, :as1, :b1]
+  timing2 = [0.75, 0.75, 2.5]
+  i2 = 0
+  live_loop :test2 do
+    3.times do
+      play piano2[i2], sustain: 12
+      sleep timing2[i2]
+      i2 = i2 + 1
+    end
+    stop
+  end
+  
+  sleep 4
+  
+  piano3 = [:gs4, :as4, :gs4, :cs4, :ds4, :as3, :fs3, :fs4]
+  timing3 = [0,0.5,1,0,0,0,1.5,1]
+  
+  i3 = 0
+  
+  live_loop :test3 do
+    8.times do
+      play piano3[i3]
+      sleep timing3[i3]
+      i3 = i3 + 1
+    end
+    stop
+  end
+  
+  piano2 = [:ds2, :as1, :b1]
+  timing2 = [0.75, 0.75, 2.5]
+  i2 = 0
+  live_loop :test4 do
+    3.times do
+      play piano2[i2], sustain: 12
+      sleep timing2[i2]
+      i2 = i2 + 1
+    end
+    stop
+  end
+end
+
+define :testitout2 do
+  piano = [:gs4, :as4, :gs4, :cs4, :ds4, :as3, :fs3]
+  timing = [0, 0.5, 1, 0, 0, 0, 2.5, 0]
+  
+  i = 0
+  
+  live_loop :test5 do
+    7.times do
+      play piano[i]
+      sleep timing[i]
+      i = i + 1
+    end
+    stop
+  end
+  
+  piano2 = [:ds2, :as1, :b1]
+  timing2 = [0.75, 0.75, 2.5]
+  i2 = 0
+  live_loop :test6 do
+    3.times do
+      play piano2[i2], sustain: 12
+      sleep timing2[i2]
+      i2 = i2 + 1
+    end
+    stop
+  end
+  
+  sleep 4
+  
+  piano3 = [:gs4, :as4, :gs4, :cs4, :ds4, :as3, :fs3, :fs4]
+  timing3 = [0,0.5,1,0,0,0,1.5,1]
+  
+  i3 = 0
+  
+  live_loop :test7 do
+    8.times do
+      play piano3[i3]
+      sleep timing3[i3]
+      i3 = i3 + 1
+    end
+    stop
+  end
+  
+  piano2 = [:ds2, :as1, :b1]
+  timing2 = [0.75, 0.75, 2.5]
+  i2 = 0
+  live_loop :test8 do
+    3.times do
+      play piano2[i2], sustain: 12
+      sleep timing2[i2]
+      i2 = i2 + 1
+    end
+    stop
+  end
+end
+
+define :thang do |n1, n2|
+  
+  sample n1, sustain: 16, sustain_level: 16
+  sleep 0.7
+  sample n1, sustain: 16, sustain_level: 16
+  sleep 0.65
+  sample n1, sustain: 16, sustain_level: 16
+  sleep 0.152
+  sample n2, sustain: 16, sustain_level: 16
+  
+end
+
+sample "C:/Users/Ronald_Hubbard/Downloads/YoungBoy-Never-Broke-Again-Forgiato-_Official-Audio_-drums-D_-minor-87bpm-440hz.wav"
+
+testitout
+sleep 4
+
+testitout2
+sleep 4
+
+testitout
+sleep 4
+
+testitout2
+sleep 4
+
+testitout
+thang :bd_pure, :bd_pure
+sleep 4
+
+testitout2
+sleep 4
